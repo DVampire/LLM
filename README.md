@@ -32,7 +32,9 @@ Then put it in the `alpaca_lora/datasets` directory
 
 Modify the run script:
 
-```CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 finetune.py --base_model 'decapoda-research/llama-7b-hf' --data_path 'datasets/alpaca_data_cleaned.json' --output_dir './workspace/exp1'```
+```
+CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 finetune.py --base_model 'decapoda-research/llama-7b-hf' --data_path 'datasets/alpaca_data_cleaned.json' --output_dir './workspace/exp1'
+```
 
 `--data_path` should be the relative path to the json file of your data.
 

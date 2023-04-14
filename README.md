@@ -26,11 +26,14 @@ Reference: [alpaca_data_cleaned.json](alpaca_lora%2Fdatasets%2Falpaca_data_clean
 Then put it in the `alpaca_lora/datasets` directory
 
 ## Step3: Start Train
-`conda activate base`
+```bash
+tmux new -s tmp1
+conda activate base
+cd /root/code/LLM/alpaca_lora
+```
 
-`cd /root/code/LLM/alpaca_lora`
 
-Modify the run script:
+Modify the run script [finetune.sh](alpaca_lora%2Ffinetune.sh):
 
 ```
 CUDA_VISIBLE_DEVICES=0 torchrun --nproc_per_node=1 finetune.py --base_model 'decapoda-research/llama-7b-hf' --data_path 'datasets/alpaca_data_cleaned.json' --output_dir './workspace/exp1'

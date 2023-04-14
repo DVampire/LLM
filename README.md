@@ -6,7 +6,7 @@ Currently only alpaca-lora, official code reference https://github.com/tloen/alp
 ## step1: Start Container
 `docker run -it --gpus=all --name llm --shm-size="100g" --rm --cpus=32 -t llm:0.0.1 /bin/bash`
 
-Note: --name <container_name>, you should pick a container name that no one else uses
+Note: `--name` <container_name>, you should pick a container name that no one else uses
 
 ## step2: Prepare Dataset
 This JSON file is a list of dictionaries, each dictionary contains the following fields:
